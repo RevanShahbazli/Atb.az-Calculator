@@ -25,8 +25,7 @@ const boxs = document.querySelectorAll('.btn')
             txt1.innerHTML = `${il} il ${ay} ay ` 
       }
       il==0 ? faiz=11: il==1 ? faiz=14.5 :il==2 ? faiz=15.5 : il==3 || il==4 ? faiz=16.5 : ''
-      console.log(faiz);
-      percentage.innerHTML = `${faiz} %`
+      percentage.innerHTML = `${faiz} %`  
 
       faizHesabla();
     }
@@ -37,7 +36,7 @@ const boxs = document.querySelectorAll('.btn')
     }
 
     function faizHesabla(){
-      monthly.innerHTML = (Math.floor((Math.floor(+miqdar.value/100)*100 + (Math.floor(+miqdar.value/100)*100)*(faiz/100))/muddet.value))
+      monthly.innerHTML = (Math.floor((Math.floor(+miqdar.value/100)*100 + (Math.floor(+miqdar.value/100)*100)*(faiz/100))/muddet.value) + "₼")
     }
 
 
