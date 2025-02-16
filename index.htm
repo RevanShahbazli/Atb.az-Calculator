@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxs">
+            <div class="credit btn active" style="cursor: pointer;">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>nağd krediti <br> hesabla</span>
+
+            </div>
+            <div class="saving btn" style="cursor: pointer;">
+                <i style="font-size: 1.8em;" class="fa-solid fa-vault"></i>
+                Əmanət üzrə gəliri <br> hesabla
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <h2 style="margin: 30px 0;">nağd krediti hesabla</h2>
+        <div class="maindiv">
+            <div class="calc">
+                <div class="amount">
+                    <div class="info" style="margin: 0; position: relative;">
+                        <div class="txt" style="color: #888;">hansı məbləğ arzunuzu reallaşdırar?</div>
+                        <div id="money"
+                            style="font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">5000
+                            AZN</div>
+                    </div>
+                    <input style="width: 98%; height: 1px; margin: 0; position: relative; top: -15px; left: 5px;"
+                        oninput="meblegGoster()" id="miqdar" class="slider" type="range" value="5000" min="300"
+                        max="40000" placeholder="hansı məbləğ arzunuzu reallaşdırar">
+                </div>
+                <div class="period">
+                    <div class="info">
+                        <div class="txt" style="color: #888;">müddəti seçin</div>
+                        <div id="txt1"
+                            style="font-weight: 700; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">1 il</div>
+                    </div>
+                    <input style="width: 98%; height: 1px; margin: 0; position: relative; top: -15px; left: 5px;"
+                        oninput="show()" id="muddet" class="slider" type="range" value="12" min="3" max="48"
+                        placeholder="hansı məbləğ arzunuzu reallaşdırar" />
+
+                    <div style=" width: 100%; display: flex; justify-content: space-between; margin: 0; ">
+                        <div style="color: #888; font-size: .8em;">3 ay</div>
+                        <div style="color: #888; font-size: .8em;">48 ay</div>
+                    </div>
+                </div>
+            </div>
+            <div class="result">
+                <div class="headtxt">
+                    <div class="first">
+                        <p
+                            style="font-weight: 700; font-size: 1.5em; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                            bizim <br>təklif</p>
+                    </div>
+                    <div class="second"
+                        style=" display: flex; width: 70%; justify-content: space-between; margin: 30px 0;">
+                        <div class="box">
+                            <h5
+                                style="font-size:1.1; font-weight: 100; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #8f8f8f;">
+                                faiz dərəcəsi</h5>
+                            <h5 id="percentage" style="font-size: 2.2em; font-weight: 700;">14.5%</h5>
+                        </div>
+                        <div class="box">
+                            <h5
+                                style="font-size:1.1; font-weight: 100; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #8f8f8f;">
+                                aylıq ödəniş</h5>
+                            <h5 id="monthly" style="font-size: 2.2em; font-weight: 700;">477₼</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
